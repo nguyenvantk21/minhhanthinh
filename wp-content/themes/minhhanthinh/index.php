@@ -1,34 +1,39 @@
-
 <?php get_header(); ?>
-<div id="content" class="site-content">
-    <div class="mui-container-fluid">
-        <div class="mui-row">
-                <div><?php echo do_shortcode('[wonderplugin_slider id="1"]'); ?></div>
-        </div>
-    </div>
-</div>
+<div class="container">
+    <div class="wonderplugin_slider"><?php echo do_shortcode('[wonderplugin_slider id="1"]'); ?></div>
 
-<div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
 
-        <section class="section-1">
-            <div class="mui-container">
-                <div class="mui-row">
+
+
+
+
+
+
+
+<div>
+    <main>
+
+
+
+
+        <section>
+            <div>
+                <div>
                 <?php
                 $args = array( 'category' => 191, 'post_type' =>  'post' ); 
                 $postslist = array_reverse(get_posts( $args ));
                 $i = 0;
                 foreach ($postslist as $post) :  setup_postdata($post); 
                 ?>
-                    <div class="card-layout fadeInUp delay-<?php $i; ?> has-animation">
+                    <div>
                         <a href="#" title="tư vấn xây dựng">
-                            <div class="card-content">
+                            <div>
                                 <header>
-                                    <h3 class="front-page-title"><?php the_title(); ?></h3>
+                                    <h3><?php the_title(); ?></h3>
                                 </header>
                                 <p><?php the_excerpt(); ?></p>
                             </div>
-                            <div class="card-image">
+                            <div>
                             <?php the_post_thumbnail('post-thumbnail', ['class' => '<?php the_title(); ?>']); $i = $i + 500; ?>
                             </div>
                         </a>
@@ -40,20 +45,20 @@
   
 
 
-        <section class="section-2">
-            <div class="mui-container">
-                <div class="mui-row">
-                    <div id="product_cat_widget-2" class="widget-1 widget-first widget-last widget-odd slideInDown delay-0 has-animation smooth front-section widget_product_cat_widget">
-                        <div class="front-title">
+        <section>
+            <div>
+                <div>
+                    <div>
+                        <div>
                             <?php
                                 $args = array( 'category' => 192, 'post_type' =>  'post' ); 
                                 $postslist = array_reverse(get_posts( $args ));
                                 $i = 'mui--is-active';
                             ?>  
-                            <h3 class="front-page-title">vật liệu hoàn thiện</h3>
+                            <h3>vật liệu hoàn thiện</h3>
                         </div>
-                        <div class="product-tabs">
-                            <ul class="mui-tabs__bar">
+                        <div>
+                            <ul>
                                 <?php
                                 foreach ($postslist as $post) :  setup_postdata($post); 
                                 ?>
@@ -64,8 +69,8 @@
                                 <?php endforeach; ?>
                             </ul>
 
-                            <div class="mui-tabs__pane mui--is-active" id="child-cat--gach-op-lat">
-                                <div class="owl-carousel pro-cat-carousel">
+                            <div>
+                                <div>
                                     <?php
                                     $args = array( 'category' => 199, 'post_type' =>  'post' ); 
                                     $postslist = get_posts( $args );
@@ -73,7 +78,7 @@
                                     ?>
                                         <div class="item">
                                             <a href="">
-                                                <?php the_post_thumbnail('post-thumbnail', ['class' => 'attachment-post-carousel size-post-carousel wp-post-image']); ?>
+                                                <?php the_post_thumbnail('post-thumbnail', ['class' => 'attachment']); ?>
                                                 
                                                 <h5><?php the_title(); ?></h5>
                                             </a>
@@ -87,14 +92,14 @@
             </div>
         </section>
 
-        <section class="section-3">
-            <div class="mui-container">
-                <div class="mui-row">
-                    <div id="news_template_widget-2" class="widget-1 widget-first widget-last widget-odd front-section news-template">      
-                        <header class="widget-header">
-                            <h3 class="front-page-title">dự án tiêu biểu</h3>      
+        <section>
+            <div>
+                <div>
+                    <div>
+                        <header>
+                            <h3>dự án tiêu biểu</h3>
                         </header>
-                        <div class="news-gallery">
+                        <div>
                             <?php
                             $args = array( 'category' => 201, 'post_type' =>  'post', 'posts_per_page'=> -1, 
                                             'numberposts'=>-1 ); 
@@ -124,75 +129,55 @@
 
 
 
-        <section class="section-4">
-            <div class="mui-container">
-                <div class="mui-row">
-                    <div id="news_template_widget-3" class="widget-1 widget-first widget-odd testimonials-section has-animation delay-0 flipInY smooth front-section news-template">      
-                        <header class="widget-header">
-                            <h3 class="front-page-title">Ý kiến khách hàng</h3>      
+<section>
+            <div>
+                <div>
+                    <div>
+                        <header>
+                            <h3>Ý kiến khách hàng</h3>
                         </header>
-                        <div class="testimonals">
+                        <div>
                         <?php
                             $args = array( 'category' => 197, 'post_type' =>  'post'); 
                             $i = 1;
                             $postslist = array_reverse(get_posts( $args ));
                             foreach ($postslist as $post) :  setup_postdata($post); 
                             ?>
-                            <div class="testimonial-item">
-                                <div class="thumb">
-                                    <div class="frame">
+                            <div>
+                                <div>
+                                    <div>
                                         <?php the_post_thumbnail(); ?>
                                     </div>
                                 </div>
-                                <div class="author">
-                                    <div class="text">
-                                        <h5 class="job-title"><?php the_title(); ?></h5>
-                                        <span class="company"><?php the_content(); ?></span>
+                                <div>
+                                    <div>
+                                        <h5><?php the_title(); ?></h5>
+                                        <span><?php the_content(); ?></span>
                                         <blockquote><?php the_excerpt(); ?></blockquote>
                                     </div>
                                 </div>
                             </div>
                             <?php endforeach; ?>
                         </div>
-
-
-<script type="text/javascript">
-jQuery(document).ready(function($){
-    $(".testimonals").slick({
-        autoplay: true,
-        autoplaySpeed: 750,
-        swipeToSlide: true,
-        arrows: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        vertical: true,
-        infinite: true
-    });
-});
-</script>
-</div>
-
-
-
-            <div id="news_template_widget-4" class="widget-2 widget-last widget-even has-animation delay-0 flipInY smooth front-section news-template">      
-                <header class="widget-header">
-                    <h3 class="front-page-title">Tin nổi bật</h3>      
+                    </div>
+                <div>
+                <header>
+                    <h3>Tin nổi bật</h3>
                 </header>
-                <div class="news-featured-list">
+                <div>
                     <?php
                     $args = array( 'category' => 198, 'post_type' =>  'post', 'posts_per_page'=> -1, 
                                     'numberposts'=>-1 ); 
                     $postslist = get_posts( $args );
                     foreach ($postslist as $post) :  setup_postdata($post); 
                     ?>
-                    <div class="news-featured-item">
+                    <div>
                         <a href="#">
-                            <div class="thumb-container">
+                            <div>
                                 <?php the_post_thumbnail(); ?>
                             </div>
-                            <div class="news-container">
-                                <h3 class="news-title"><?php the_title(); ?></h3>
+                            <div>
+                                <h3><?php the_title(); ?></h3>
                                 <p><?php the_excerpt(); ?></p>
                             </div>
                         </a>
@@ -208,5 +193,12 @@ jQuery(document).ready(function($){
 
         </main>
     </div>
+
+
+
+
+
+
+
 </div>
 <?php get_footer(); ?>
