@@ -3,6 +3,111 @@
     <div class="wonderplugin_slider"><?php echo do_shortcode('[wonderplugin_slider id="1"]'); ?></div>
 
 
+<div class="function-div-outside">
+    <div class="function-div">
+        <?php
+        $args = array( 'category' => 191, 'post_type' =>  'post' ); 
+        $postslist = array_reverse(get_posts( $args ));
+        $i = 1;
+        foreach ($postslist as $post) :  setup_postdata($post); 
+        ?>
+            <div class="function-child">
+                <div class="function-description">
+                    <div class="function-description-title function-description-title-<?php echo $i; ?>"><?php the_title(); ?></div>
+                    <div class="function-description-excerpt"><?php the_excerpt(); ?></div>
+                </div>
+                <div>
+                    <?php the_post_thumbnail('post-thumbnail', ['class' => 'function-image']); $i++;?>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
+<div class="materials-div">
+    <h3>vật liệu hoàn thiện</h3>
+
+    <div class="materials-tab">
+        <?php
+        $args = array( 'category' => 192, 'post_type' =>  'post' ); 
+        $postslist = array_reverse(get_posts( $args ));
+        $i = 1;
+        foreach ($postslist as $post) :  setup_postdata($post); 
+        ?>
+            <button id="materials-<?php echo $i; ?>" class="materials-tab" onclick="openMaterial('<?php the_title(); ?>')"><?php the_title(); ?></button>
+            <?php $i++; ?>
+            <?php endforeach; ?>
+    </div>
+
+    <div id="gạch ốp lát" class="material">
+        <?php
+        $args = array( 'category' => 199, 'post_type' =>  'post' ); 
+        $postslist = get_posts( $args );
+        foreach ($postslist as $post) :  setup_postdata($post); 
+        ?>
+        <div class="material-item">
+            <a href="">
+                <?php the_post_thumbnail('post-thumbnail', ['class' => 'material-attachment']); ?>
+                <h5 class="material-title"><?php the_title(); ?></h5>
+            </a>
+        </div>
+        <?php endforeach; ?>
+    </div>
+
+
+    <div id="thiết bị vệ sinh" class="material" style="display:none">
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p> 
+    </div>
+
+
+    <div id="bột sơn hoàn thiện" class="material" style="display:none">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    
+</div>
+
+
+
+<div class="project-div-outside">
+    <h3>dự án tiêu biểu</h3>
+    <div class="project-all-div">
+        <?php
+        $categories = array(193, 194, 195, 196);
+        $i = 1;
+        foreach ($categories as $category) :  setup_postdata($post);
+        ?>
+        <div class="project-div">
+            <?php
+            $args = array( 'category' => $category, 'post_type' =>  'post', 'posts_per_page'=> -1, 
+                            'numberposts'=>-1 ); 
+            $postslist = array_reverse(get_posts( $args ));
+            foreach ($postslist as $post) :  setup_postdata($post); 
+            ?>
+                <a href="">
+                    <div class="project-image project-image-<?php echo $i; ?>"><?php the_post_thumbnail(); $i++; ?></div>
+                </a>
+            <?php endforeach; ?>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
+
+<div class="customer-new-div">
+    
+</div>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16,113 +121,11 @@
 
 
 
-        <section>
-            <div>
-                <div>
-                <?php
-                $args = array( 'category' => 191, 'post_type' =>  'post' ); 
-                $postslist = array_reverse(get_posts( $args ));
-                $i = 0;
-                foreach ($postslist as $post) :  setup_postdata($post); 
-                ?>
-                    <div>
-                        <a href="#" title="tư vấn xây dựng">
-                            <div>
-                                <header>
-                                    <h3><?php the_title(); ?></h3>
-                                </header>
-                                <p><?php the_excerpt(); ?></p>
-                            </div>
-                            <div>
-                            <?php the_post_thumbnail('post-thumbnail', ['class' => '<?php the_title(); ?>']); $i = $i + 500; ?>
-                            </div>
-                        </a>
-                    </div>
-                <?php endforeach; ?>
-                </div>
-            </div>
-        </section>
-  
 
 
-        <section>
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <?php
-                                $args = array( 'category' => 192, 'post_type' =>  'post' ); 
-                                $postslist = array_reverse(get_posts( $args ));
-                                $i = 'mui--is-active';
-                            ?>  
-                            <h3>vật liệu hoàn thiện</h3>
-                        </div>
-                        <div>
-                            <ul>
-                                <?php
-                                foreach ($postslist as $post) :  setup_postdata($post); 
-                                ?>
-                                <li class="<?php echo $i; ?>">
-                                    <a data-mui-toggle="tab" data-mui-controls="child-cat--<?php strtolower(the_title()); ?>"><?php the_title(); ?></a>
-                                </li>
-                                <?php $i = ''; ?>
-                                <?php endforeach; ?>
-                            </ul>
+        
 
-                            <div>
-                                <div>
-                                    <?php
-                                    $args = array( 'category' => 199, 'post_type' =>  'post' ); 
-                                    $postslist = get_posts( $args );
-                                    foreach ($postslist as $post) :  setup_postdata($post); 
-                                    ?>
-                                        <div class="item">
-                                            <a href="">
-                                                <?php the_post_thumbnail('post-thumbnail', ['class' => 'attachment']); ?>
-                                                
-                                                <h5><?php the_title(); ?></h5>
-                                            </a>
-                                        </div>
-                                    <?php endforeach; ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div>
-                <div>
-                    <div>
-                        <header>
-                            <h3>dự án tiêu biểu</h3>
-                        </header>
-                        <div>
-                            <?php
-                            $args = array( 'category' => 201, 'post_type' =>  'post', 'posts_per_page'=> -1, 
-                                            'numberposts'=>-1 ); 
-                            $i = 1;
-                            $postslist = array_reverse(get_posts( $args ));
-                            foreach ($postslist as $post) :  setup_postdata($post); 
-                            ?>
-                                <div class="news-gallery-item item-<?php echo $i; ?>">
-                                    <a href="#">
-                                        <div class="thumb-container">
-                                            <?php the_post_thumbnail(); $i++; ?>
-                                        </div>
-                                        <div class="news-container">
-                                            <h3 class="news-title">đại học bách khoa đà nẵng</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
 
 
