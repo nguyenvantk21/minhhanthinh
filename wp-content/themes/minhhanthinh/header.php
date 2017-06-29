@@ -6,6 +6,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <link rel='stylesheet' id='mui-css-css'  href='https://cdnjs.cloudflare.com/ajax/libs/muicss/0.9.14/css/mui.min.css?ver=4.7.5' type='text/css' media='all' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <link rel='stylesheet' id='owl-carousel-css-css'  href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css?ver=4.7.5' type='text/css' media='all' />
 
@@ -13,7 +14,6 @@
     <script type='text/javascript' src='wp-content/themes/minhhanthinh/js/wonderpluginslider.js'></script>
     <title>MHT Construction</title>
     <style type="text/css">
-
         html {width: 100%; background-color: white; height: auto; margin: 0;}
         body {width: 100%;background-color: white; height: inherit; margin: 0;font: 400 15px Roboto, Arial, sans-serif;}
 
@@ -51,7 +51,7 @@
 
 /*  Materials Div  */
         .materials-div {height: 422px;background-image: url("wp-content/themes/minhhanthinh/sec2-bg.png");}
-        .materials-div h3 {text-transform: uppercase;font-weight: bold;font-size: 20px;text-align: center;}
+        .materials-div h3 {text-transform: uppercase;font-weight: bold;font-size: 30px;text-align: center;}
         .materials-tab {text-align: center;height: 50px;box-shadow: none;overflow: hidden; box-shadow: none;
   border-radius: 0;}
         .materials-tab:focus {background-color: green;}
@@ -63,9 +63,9 @@
 
 /*  Project Div   */
         .project-div-outside {width: 100%;height: 513px;background-color: white;}
-        .project-div-outside h3 {text-transform: uppercase;text-align: center;color: green;font-size: 30px;padding-top: 40px;}
+        .project-div-outside h3 {text-transform: uppercase;text-align: center;color: green;font-size: 30px;padding-top: 40px;font-weight: bold;}
         .project-all-div {margin-left: 130px;}
-        .project-div {width: 288.75px;float: left;}
+        .project-div {width: 288.75px;float: left;padding-top: 50px;}
         .project-div-p {text-transform: uppercase;color: white;position: relative;top:-150px;height: 0px;}
         .project-image {width: inherit;overflow: hidden;transition: opacity 0.5s;margin-left: 5px;}
         .project-image:hover {opacity: 0.5;}
@@ -78,12 +78,46 @@
         .project-image-7 {height: 147.41px;padding-top: 5px;}
 
 /*  Custommer and News Div   */
-        .customer-new-div {width: 100%;height: 634px;background-image: url("wp-content/themes/minhhanthinh/sec4-bg.png");}
+.customer-news-div {clear: both;width: 100%;height: 634px;background-image: url("wp-content/themes/minhhanthinh/sec4-bg.png");padding-top: 80px;}
+    .customer-div {width: 49%;float: left;height: inherit;}
+        .customer-header {clear: both;height: 50px;}
+            .customer-title {text-transform: uppercase;font-weight: bold;float: left;line-height: 40px;font-size: 30px;}
+            .straign-line-1 {width: 380px;border-bottom: 3px solid green;height: 20px;float: right;}
 
-
+        .customer-content {width: 100$;height: 500px;}
+            .customer-one {clear: both;padding-top: 20px;}
+                .customer-image {float: left;width: 100px;border: 1px solid black;border-radius: 50%;overflow: hidden;height: 100px;margin-top: 3px;}
+                .arrow-left {width: 0;height: 0;border-top: 20px solid transparent;border-bottom: 20px solid transparent;border-right: 20px solid #f3f3f3;float: left;margin-top: 30px;padding-left: 30px;}
+                .customer-comment {float: left;width: 70%;border:1px solid transparent;box-shadow: 1px 1px 2px -1px #999;background-color: #f3f3f3;height: 116px;margin-left: 0px;border-radius: 15px;}
+                    .customer-comment-title {text-transform: uppercase;font-weight: bold;padding-top:5px;padding-left: 20px;padding-top: 10px;}
+                    .customer-comment-position {text-transform: uppercase;font-weight: bold;padding-left: 20px;padding-top: 5px;}
+                    .customer-comment-content {font-style: italic;padding-left: 20px;}
+    .news-div {width: 49%;float: left;height: inherit;margin-left: 10px;}
+        .news-header {clear: both;}
+            .news-title {text-transform: uppercase;float: left;font-weight: bold;line-height: 40px;font-size: 30px;}
+            .straign-line-2 {width: 515px;border-bottom: 3px solid green;height: 20px;float: right;}
+        .news-content {clear: both;width: 100%;height: 500px;padding-top: 15px;}
+            .news-content-one {width: 100%;height: 117px;padding-top: 20px;}
+                .news-image {clear: both;float: left;width: 169px;height: 117px;}
+                .news-text {float: left;width: 70%;height: 117px;padding-left: 15px;}
+                    .news-text-title {color: red;font-size: 16px;}
+                    .news-text-excerpt {line-height: 1.75em;}
 
 /*  Footer Div   */
-        .footer-div {width: 100%;height: 352px;background-image: url("wp-content/themes/minhhanthinh/footer-bg.png");}
+        .footer-div {clear: both;width: 100%;height: 352px;background-image: url("wp-content/themes/minhhanthinh/footer-bg.png");}
+            .infor-map-div {height: 312px;padding-top: 30px;}
+                .information-div {color: white;width: 49%;float: left;height: inherit;}
+                    .information-title {text-transform: uppercase;font-size: 30px;padding-left: 85px;padding-bottom: 15px;}
+                    .information-detail li {list-style-type: none;font-size: 15px;line-height: 2em;padding-left: 50px;clear: both;}
+                        .material-icons {padding-right: 15px;float: left;}
+                        .information-text {float: left;}
+                .map-div {width: 40%;float: left;height: inherit;padding-left: 20px;}
+            .copyright-div {width: 100%;background-color: green;height: 40px;display: inline-block;}
+
+                .copyright-text {color: white;width: auto;float: left;padding-top: 10px;padding-left: 280px;line-height: 1.5em;}
+                .copyright-div img {width: 237px;float: left;}
+
+
 
 
     </style>
