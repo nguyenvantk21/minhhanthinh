@@ -25,42 +25,37 @@
         </div>
     </div>
 
-    <div class="materials-div">
-        <h3>vật liệu hoàn thiện</h3>
-        <div class="materials-tab">
+<div class="materials-div">
+    <h3>vật liệu hoàn thiện</h3>
+    <div id="tabs">
+        <ul class="materials-header-div">
             <?php
             $args = array( 'category' => 192, 'post_type' =>  'post' ); 
             $postslist = array_reverse(get_posts( $args ));
             $i = 1;
-            foreach ($postslist as $post) :  setup_postdata($post); 
-            ?>
-                <button id="materials-<?php echo $i; ?>" class="materials-tab" onclick="openMaterial('<?php the_title(); ?>')"><?php the_title(); ?></button>
+            foreach ($postslist as $post) :  setup_postdata($post); ?>
+                <li class="material-header-one"><a href="#tabs-<?php echo $i; ?>" class="material-header"><?php the_title(); ?></a></li>
                 <?php $i++; ?>
-                <?php endforeach; ?>
-        </div>
-        <div id="gạch ốp lát" class="material">
+            <?php endforeach; ?>
+        </ul>
+        <div id="tabs-1">
             <?php
             $args = array( 'category' => 199, 'post_type' =>  'post' ); 
             $postslist = get_posts( $args );
-            foreach ($postslist as $post) :  setup_postdata($post); 
-            ?>
-            <div class="material-item">
-                <a href="">
-                    <?php the_post_thumbnail('post-thumbnail', ['class' => 'material-attachment']); ?>
-                    <h5 class="material-title"><?php the_title(); ?></h5>
-                </a>
-            </div>
-            <?php endforeach; ?>
+            foreach ($postslist as $post) :  setup_postdata($post); ?>
+                <div class="material-item">
+                    <a href="">
+                        <?php the_post_thumbnail('post-thumbnail', ['class' => 'material-attachment']); ?>
+                        <h5 class="material-title"><?php the_title(); ?></h5>
+                    </a>
+                </div>
+                <?php endforeach; ?>
         </div>
-        <div id="thiết bị vệ sinh" class="material" style="display:none">
-          <h2>Paris</h2>
-          <p>Paris is the capital of France.</p> 
-        </div>
-        <div id="bột sơn hoàn thiện" class="material" style="display:none">
-          <h2>Tokyo</h2>
-          <p>Tokyo is the capital of Japan.</p>
-        </div>
+        <div id="tabs-2"></div>
+        <div id="tabs-3"></div>
     </div>
+</div>
+
 
 
 

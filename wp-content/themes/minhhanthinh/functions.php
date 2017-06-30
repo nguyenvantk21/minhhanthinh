@@ -27,3 +27,16 @@
  */
 
 add_theme_support( 'post-thumbnails' );
+add_filter( 'pt-tabs/use_older_bootstrap_layout', '__return_true' );
+function arphabet_widgets_init() {
+
+    register_sidebar( array(
+        'name' => 'Home right sidebar',
+        'id' => 'home_right_1',
+        'before_widget' => '<div>',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="rounded">',
+        'after_title' => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );

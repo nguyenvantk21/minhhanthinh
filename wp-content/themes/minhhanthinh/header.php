@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <title>MHT Construction</title>
     <link rel='stylesheet' id='mui-css-css'  href='https://cdnjs.cloudflare.com/ajax/libs/muicss/0.9.14/css/mui.min.css?ver=4.7.5' type='text/css' media='all' />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-<link rel='stylesheet' id='owl-carousel-css-css'  href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css?ver=4.7.5' type='text/css' media='all' />
-
-<script type='text/javascript' src='wp-content/themes/minhhanthinh/js/jquery.js'></script>
+    <link rel="stylesheet" href="wp-content/themes/minhhanthinh/css/font-awesome.min.css">
+    <link rel='stylesheet' id='owl-carousel-css-css'  href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css?ver=4.7.5' type='text/css' media='all' />
+    <script src="wp-content/themes/minhhanthinh/js/jquery-1.12.4.js"></script>
+    <script src="wp-content/themes/minhhanthinh/js/jquery-ui.js"></script>
+    <script type='text/javascript' src='wp-content/themes/minhhanthinh/js/jquery.js'></script>
     <script type='text/javascript' src='wp-content/themes/minhhanthinh/js/wonderpluginslider.js'></script>
-    <title>MHT Construction</title>
+        <script>
+            $( function() {
+            $( "#tabs" ).tabs(); } );
+        </script>
     <style type="text/css">
         html {width: 100%; background-color: white; height: auto; margin: 0;}
         body {width: 100%;background-color: white; height: inherit; margin: 0;font: 400 15px Roboto, Arial, sans-serif;}
@@ -50,16 +55,21 @@
         .function-image:hover {opacity: 1;}
 
 /*  Materials Div  */
-        .materials-div {height: 422px;background-image: url("wp-content/themes/minhhanthinh/sec2-bg.png");}
-        .materials-div h3 {text-transform: uppercase;font-weight: bold;font-size: 30px;text-align: center;}
-        .materials-tab {text-align: center;height: 50px;box-shadow: none;overflow: hidden; box-shadow: none;
-  border-radius: 0;}
-        .materials-tab:focus {background-color: green;}
-        .material-item {float: left;}
-        .material-attachment {margin-left: 10px;margin-left: 20px;}
-        .material-title {text-align: center;color: black;}
-        .material-title:hover {}
-        .material {margin-left: 50px;margin-right: 200px;}
+.materials-div {height: auto;background-image: url("wp-content/themes/minhhanthinh/sec2-bg.png");padding-top: 10px;min-height: 183px;}
+    .materials-div h3 {text-transform: uppercase;font-weight: bold;font-size: 30px;text-align: center;padding-bottom: 20px;}
+    .tabs {height: auto;background: none;}
+        .materials-header-div {list-style-type: none;height: 38px;}
+            .material-header-one {margin-left: 380px;}
+            .material-header {height: 38px;background-color: grey;width: 200px;float: left;margin-bottom: 30px;color: white;text-decoration: none;text-align: center;vertical-align: middle;line-height: 38px;margin-left: 10px;}
+            .material-header:hover {color: white;text-decoration: none;}
+            .material-header:focus {background-color: green;color: white;text-decoration: none;}
+        #tabs-1 {clear: both;height: 280px;margin-left: 145px;}
+            .material-item {float: left;}
+                .material-attachment {margin-right: 5px;}
+                .material-title {text-align: center;color: black;}
+                .material-title:hover {}
+        #tabs-2 {}
+        #tabs-3 {}
 
 /*  Project Div   */
         .project-div-outside {width: 100%;height: 513px;background-color: white;}
@@ -70,7 +80,7 @@
         .project-image {width: inherit;overflow: hidden;transition: opacity 0.5s;margin-left: 5px;}
         .project-image:hover {opacity: 0.5;}
         .project-image-1 {height: 152.41px;}
-        .project-image-2 {height: 430.41px;padding-top: 5px;}
+        .project-image-2 {height: 230.41px;padding-top: 5px;}
         .project-image-3 {height: 387.91px;}
         .project-image-4 {height: 191.41px;}
         .project-image-5 {height: 191.41px;padding-top: 5px;}
@@ -78,14 +88,14 @@
         .project-image-7 {height: 147.41px;padding-top: 5px;}
 
 /*  Custommer and News Div   */
-.customer-news-div {clear: both;width: 100%;height: 634px;background-image: url("wp-content/themes/minhhanthinh/sec4-bg.png");padding-top: 80px;}
+.customer-news-div {clear: both;width: 100%;height: 634px;background-image: url("wp-content/themes/minhhanthinh/sec4-bg.png");padding-top: 100px;}
     .customer-div {width: 49%;float: left;height: inherit;}
         .customer-header {clear: both;height: 50px;}
             .customer-title {text-transform: uppercase;font-weight: bold;float: left;line-height: 40px;font-size: 30px;}
             .straign-line-1 {width: 380px;border-bottom: 3px solid green;height: 20px;float: right;}
 
         .customer-content {width: 100$;height: 500px;}
-            .customer-one {clear: both;padding-top: 20px;}
+            .customer-one {clear: both;padding-top: 30px;}
                 .customer-image {float: left;width: 100px;border: 1px solid black;border-radius: 50%;overflow: hidden;height: 100px;margin-top: 3px;}
                 .arrow-left {width: 0;height: 0;border-top: 20px solid transparent;border-bottom: 20px solid transparent;border-right: 20px solid #f3f3f3;float: left;margin-top: 30px;padding-left: 30px;}
                 .customer-comment {float: left;width: 70%;border:1px solid transparent;box-shadow: 1px 1px 2px -1px #999;background-color: #f3f3f3;height: 116px;margin-left: 0px;border-radius: 15px;}
@@ -97,7 +107,7 @@
             .news-title {text-transform: uppercase;float: left;font-weight: bold;line-height: 40px;font-size: 30px;}
             .straign-line-2 {width: 515px;border-bottom: 3px solid green;height: 20px;float: right;}
         .news-content {clear: both;width: 100%;height: 500px;padding-top: 15px;}
-            .news-content-one {width: 100%;height: 117px;padding-top: 20px;}
+            .news-content-one {width: 100%;height: 117px;padding-top: 30px;}
                 .news-image {clear: both;float: left;width: 169px;height: 117px;}
                 .news-text {float: left;width: 70%;height: 117px;padding-left: 15px;}
                     .news-text-title {color: red;font-size: 16px;}
