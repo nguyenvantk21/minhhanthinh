@@ -14,14 +14,29 @@
     <script src="wp-content/themes/minhhanthinh/js/jquery-ui.js"></script>
     <script type='text/javascript' src='wp-content/themes/minhhanthinh/js/jquery.js'></script>
     <script type='text/javascript' src='wp-content/themes/minhhanthinh/js/wonderpluginslider.js'></script>
-        <script>
-            $( function() {
-            $( "#tabs" ).tabs(); } );
-        </script>
+    <script>
+        $( function() {
+        $( "#tabs" ).tabs(); } );
+    </script>
+
     <style type="text/css">
         html {width: 100%; background-color: white; height: auto; margin: 0;}
         body {width: 100%;background-color: white; height: inherit; margin: 0;font: 400 15px Roboto, Arial, sans-serif;}
 
+        /* Small Screen - One Div */
+        @media only screen and (max-device-width : 599px) {
+            
+        }
+
+        /* Mediun or Large Screen - Full Div */
+        @media only screen and (min-device-width : 600px) and (max-device-width : 1440px) {
+        
+        }
+
+        /* Extra Screen - Content 1440px */
+        @media only screen and (min-device-width : 1441px) {
+        
+        }
 /*  Menu and Image  */
         .head {margin: 0 auto; height: 107px;}
         .head img {float: left;flex-wrap: wrap; margin-left: 90px; margin-top: 0;}
@@ -40,7 +55,7 @@
         .dropdown:hover .dropdown-content {display: block;}
 
 /*  Container  */
-        .container {clear: both;width: 1440px;height: auto;}
+        .container {clear: both;width: 100%;height: auto;}
         .wonderplugin_slider {width: inherit;margin-left: 0px;}
 
 /*  Function Div  */
@@ -55,19 +70,19 @@
         .function-image:hover {opacity: 1;}
 
 /*  Materials Div  */
-.materials-div {height: auto;background-image: url("wp-content/themes/minhhanthinh/sec2-bg.png");padding-top: 10px;min-height: 183px;}
-    .materials-div h3 {text-transform: uppercase;font-weight: bold;font-size: 30px;text-align: center;padding-bottom: 20px;}
-    .tabs {height: auto;background: none;}
+        .materials-div {height: auto;background-image: url("wp-content/themes/minhhanthinh/sec2-bg.png");padding-top: 10px;min-height: 183px;}
+        .materials-div h3 {text-transform: uppercase;font-weight: bold;font-size: 30px;text-align: center;padding-bottom: 20px;}
+        .tabs {height: auto;background: none;}
         .materials-header-div {list-style-type: none;height: 38px;}
-            .material-header-one {margin-left: 380px;}
-            .material-header {height: 38px;background-color: grey;width: 200px;float: left;margin-bottom: 30px;color: white;text-decoration: none;text-align: center;vertical-align: middle;line-height: 38px;margin-left: 10px;}
-            .material-header:hover {color: white;text-decoration: none;}
-            .material-header:focus {background-color: green;color: white;text-decoration: none;}
+        .material-header-one {margin-left: 380px;}
+        .material-header {height: 38px;background-color: grey;width: 200px;float: left;margin-bottom: 30px;color: white;text-decoration: none;text-align: center;vertical-align: middle;line-height: 38px;margin-left: 10px;}
+        .material-header:hover {color: white;text-decoration: none;}
+        .material-header:focus {background-color: green;color: white;text-decoration: none;}
         #tabs-1 {clear: both;height: 280px;margin-left: 145px;}
-            .material-item {float: left;}
-                .material-attachment {margin-right: 5px;}
-                .material-title {text-align: center;color: black;}
-                .material-title:hover {}
+        .material-item {float: left;}
+        .material-attachment {margin-right: 5px;}
+        .material-title {text-align: center;color: black;}
+        .material-title:hover {}
         #tabs-2 {}
         #tabs-3 {}
 
@@ -89,52 +104,47 @@
         .project-text {position: relative;top:30px;color: white;text-transform: uppercase;text-decoration: none;text-align: center;display: none;}
 
 
-
-
 /*  Custommer and News Div   */
-.customer-news-div {clear: both;width: 100%;height: 634px;background-image: url("wp-content/themes/minhhanthinh/sec4-bg.png");padding-top: 100px;}
-    .customer-div {width: 49%;float: left;height: inherit;}
+        .customer-news-div {clear: both;width: 100%;height: 634px;background-image: url("wp-content/themes/minhhanthinh/sec4-bg.png");padding-top: 100px;}
+        .customer-div {width: 49%;float: left;height: inherit;}
         .customer-header {clear: both;height: 50px;}
-            .customer-title {text-transform: uppercase;font-weight: bold;float: left;line-height: 40px;font-size: 30px;}
-            .straign-line-1 {width: 380px;border-bottom: 3px solid green;height: 20px;float: right;}
+        .customer-title {text-transform: uppercase;font-weight: bold;float: left;line-height: 40px;font-size: 30px;}
+        .straign-line-1 {width: 380px;border-bottom: 3px solid green;height: 20px;float: right;}
 
         .customer-content {width: 100$;height: 500px;}
-            .customer-one {clear: both;padding-top: 30px;}
-                .customer-image {float: left;width: 100px;border: 1px solid black;border-radius: 50%;overflow: hidden;height: 100px;margin-top: 3px;}
-                .arrow-left {width: 0;height: 0;border-top: 20px solid transparent;border-bottom: 20px solid transparent;border-right: 20px solid #f3f3f3;float: left;margin-top: 30px;padding-left: 30px;}
-                .customer-comment {float: left;width: 70%;border:1px solid transparent;box-shadow: 1px 1px 2px -1px #999;background-color: #f3f3f3;height: 116px;margin-left: 0px;border-radius: 15px;}
-                    .customer-comment-title {text-transform: uppercase;font-weight: bold;padding-top:5px;padding-left: 20px;padding-top: 10px;}
-                    .customer-comment-position {text-transform: uppercase;font-weight: bold;padding-left: 20px;padding-top: 5px;}
-                    .customer-comment-content {font-style: italic;padding-left: 20px;}
-    .news-div {width: 49%;float: left;height: inherit;margin-left: 10px;}
+        .customer-one {clear: both;padding-top: 30px;}
+        .customer-image {float: left;width: 100px;border: 1px solid black;border-radius: 50%;overflow: hidden;height: 100px;margin-top: 3px;}
+        .arrow-left {width: 0;height: 0;border-top: 20px solid transparent;border-bottom: 20px solid transparent;border-right: 20px solid #f3f3f3;float: left;margin-top: 30px;padding-left: 30px;}
+        .customer-comment {float: left;width: 70%;border:1px solid transparent;box-shadow: 1px 1px 2px -1px #999;background-color: #f3f3f3;height: 116px;margin-left: 0px;border-radius: 15px;}
+        .customer-comment-title {text-transform: uppercase;font-weight: bold;padding-top:5px;padding-left: 20px;padding-top: 10px;}
+        .customer-comment-position {text-transform: uppercase;font-weight: bold;padding-left: 20px;padding-top: 5px;}
+        .customer-comment-content {font-style: italic;padding-left: 20px;}
+        .news-div {width: 49%;float: left;height: inherit;margin-left: 10px;}
         .news-header {clear: both;}
-            .news-title {text-transform: uppercase;float: left;font-weight: bold;line-height: 40px;font-size: 30px;}
-            .straign-line-2 {width: 515px;border-bottom: 3px solid green;height: 20px;float: right;}
+        .news-title {text-transform: uppercase;float: left;font-weight: bold;line-height: 40px;font-size: 30px;}
+        .straign-line-2 {width: 515px;border-bottom: 3px solid green;height: 20px;float: right;}
         .news-content {clear: both;width: 100%;height: 500px;padding-top: 15px;}
-            .news-content-one {width: 100%;height: 117px;padding-top: 30px;}
-                .news-image {clear: both;float: left;width: 169px;height: 117px;}
-                .news-text {float: left;width: 70%;height: 117px;padding-left: 15px;}
-                    .news-text-title {color: red;font-size: 16px;}
-                    .news-text-excerpt {line-height: 1.75em;}
+        .news-content-one {width: 100%;height: 117px;padding-top: 30px;}
+        .news-image {clear: both;float: left;width: 169px;height: 117px;}
+        .news-text {float: left;width: 70%;height: 117px;padding-left: 15px;}
+        .news-text-title {color: red;font-size: 16px;}
+        .news-text-excerpt {line-height: 1.75em;}
 
 /*  Footer Div   */
         .footer-div {clear: both;width: 100%;height: 352px;background-image: url("wp-content/themes/minhhanthinh/footer-bg.png");}
-            .infor-map-div {height: 312px;padding-top: 30px;}
-                .information-div {color: white;width: 49%;float: left;height: inherit;}
-                    .information-title {text-transform: uppercase;font-size: 30px;padding-left: 85px;padding-bottom: 15px;}
-                    .information-detail li {list-style-type: none;font-size: 15px;line-height: 2em;padding-left: 50px;clear: both;}
-                        .material-icons {padding-right: 15px;float: left;}
-                        .information-text {float: left;}
-                .map-div {width: 40%;float: left;height: inherit;padding-left: 20px;}
-            .copyright-div {width: 100%;background-color: green;height: 40px;display: inline-block;}
-
-                .copyright-text {color: white;width: auto;float: left;padding-top: 10px;padding-left: 280px;line-height: 1.5em;}
-                .copyright-div img {width: 237px;float: left;}
-
-
-
+        .infor-map-div {height: 312px;padding-top: 30px;}
+        .information-div {color: white;width: 49%;float: left;height: inherit;}
+        .information-title {text-transform: uppercase;font-size: 30px;padding-left: 85px;padding-bottom: 15px;}
+        .information-detail li {list-style-type: none;font-size: 15px;line-height: 2em;padding-left: 50px;clear: both;}
+        .material-icons {padding-right: 15px;float: left;}
+        .information-text {float: left;}
+        .map-div {width: 40%;float: left;height: inherit;padding-left: 20px;}
+        .copyright-div {width: 100%;background-color: green;height: 40px;display: inline-block;}
+        .copyright-text {color: white;width: auto;float: left;padding-top: 10px;padding-left: 280px;line-height: 1.5em;}
+        .copyright-div img {width: 237px;float: left;}
 
     </style>
+
     <script>
     function openMaterial(materialName) {
         var i;
