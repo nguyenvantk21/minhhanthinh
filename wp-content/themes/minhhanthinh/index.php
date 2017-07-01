@@ -76,6 +76,7 @@
                 foreach ($postslist as $post) :  setup_postdata($post); 
                 ?>
                     <a href="">
+                        <div class="project-text">đại học bách khoa đà nẵng</div>
                         <div class="project-image project-image-<?php echo $i; ?>"><?php the_post_thumbnail(); $i++; ?></div>
                     </a>
                 <?php endforeach; ?>
