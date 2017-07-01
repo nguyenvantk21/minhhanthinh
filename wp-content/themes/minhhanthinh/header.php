@@ -85,8 +85,11 @@
         .project-image-4 {height: 191.41px;}
         .project-image-5 {height: 191.41px;padding-top: 5px;}
         .project-image-6 {height: 235.41px;}
+        
         .project-image-7 {height: 147.41px;padding-top: 5px;}
         .project-text {position: relative;top:30px;color: white;text-transform: uppercase;text-decoration: none;text-align: center;display: none;}
+
+
 
 
 /*  Custommer and News Div   */
